@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block header %}<link rel="stylesheet" href="/assets/css/home.css">{% endblock %}
+
+{% block more %}
+    <div class="menu law">
+        <img src="/assets/img/law.png" alt="head" class="head">
+        <ul>
+            <li><a href="">ค่าธรรมเนียม</a></li>
+            <li><a href="">การขอมีถิ่นที่อยู่ในราชอาณาจักร</a></li>
+            <li><a href="">การแจ้งที่พักคนต่างด้าว</a></li>
+            <li><a href="">การรับแจ้งอยู่เกิน 90 วัน</a></li>
+            <li><a href="">Online Service</a></li>
+            <li><a href="">ข้อเตือนคนไทย</a></li>
+        </ul>
+    </div>
+    <div class="employee">
+        <img src="{{ url_for('static', filename='ep_1_1.jpg') }}" alt="">
+        <img src="{{ url_for('static', filename='ep_1_2.jpg') }}" alt="">
+        <img src="{{ url_for('static', filename='ep_1_3.jpg') }}" alt="">
+        <img src="{{ url_for('static', filename='ep_1_4.jpg') }}" alt="">
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="l">
+        <div class="qrcode">
+            <div class="context">
+                <p>ประชาสัมพันธ์ QR CODE</p>
+                <p>สำหรับจองคิวออนไลน์</p>
+                <p>ตม.จว.นครราชสีมา</p>
+            </div>
+            <a href="" class="scan-me">
+                <img src="{{ url_for('static', filename='qrcode.svg') }}" alt="qr-code">
+                <p>SCAN OR CLICK ME</p>
+            </a>
+        </div>
+        <video src="{{ url_for('static', filename='vid.webm') }}" controls></video>
+        <div class="pr">
+            <img src="/assets/img/pic_news.png" alt="news">
+            <div class="list">
+                {% for item in news %}
+                <a href="/news/{{ item.link }}/" class="card">
+                    <img src="{{ url_for('static', filename='news_' + item.pic + '.jpg') }}" alt="news-{{ item.name }}">
+                    <div class="context">
+                        <p class="head">ข่าว/กิจกรรม</p>
+                        <p class="description" title="{{ item.name }}">{{ item.name }}</p>
+                        <p class="release">วันที่ {{ item.release }}</p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            <a href="" class="show-more">แสดงทั้งหมด >></a>
+        </div>
+        <div class="mt m-t">
+            <img src="/assets/img/pic_meet.png" alt="meet">
+            <div class="list">
+                {% for item in meet %}
+                <a href="/meet/{{ item.link }}/" class="card">
+                    <img src="{{ url_for('static', filename='meet_' + item.pic + '.jpg') }}" alt="news-{{ item.name }}">
+                    <div class="context">
+                        <p class="head">ข่าว/ประชุม</p>
+                        <p class="description" title="{{ item.name }}">{{ item.name }}</p>
+                        <p class="release">วันที่ {{ item.release }}</p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            <a href="" class="show-more">แสดงทั้งหมด >></a>
+        </div>
+        <div class="cm m-t">
+            <img src="/assets/img/pic_crame.png" alt="crame">
+            <div class="list">
+                {% for item in crame %}
+                <a href="/crame/{{ item.link }}/" class="card">
+                    <img src="{{ url_for('static', filename='crame_' + item.pic + '.jpg') }}" alt="news-{{ item.name }}">
+                    <div class="context">
+                        <p class="head">ข่าว/การจับกุม</p>
+                        <p class="description" title="{{ item.name }}">{{ item.name }}</p>
+                        <p class="release">วันที่ {{ item.release }}</p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            <a href="" class="show-more">แสดงทั้งหมด >></a>
+        </div>
+    </div>
+    <div class="r">
+        <a href=""><img src="{{ url_for('static', filename='mark_1.gif') }}" alt="mark"></a>
+        <a href=""><img src="{{ url_for('static', filename='mark_2.jpg') }}" alt="mark"></a>
+        <a href=""><img src="{{ url_for('static', filename='mark_3.jpg') }}" alt="mark"></a>
+        <a href=""><img src="{{ url_for('static', filename='mark_4.gif') }}" alt="mark"></a>
+        <a href=""><img src="{{ url_for('static', filename='mark_5.jpg') }}" alt="mark"></a>
+        <div class="menu">
+            <img src="/assets/img/other.png" alt="menu" class="head">
+            <ul>
+                <li><a href="">คู่มือสำหรับประชาชน</a></li>
+                <li><a href="">การรับแจ้งอยู่ในราชอาณาจักร เกิน 90 วัน</a></li>
+                <li><a href="">การแจ้งที่พักคนต่างด้าว</a></li>
+                <li><a href="">การขออยู่ต่อ</a></li>
+                <li><a href="">การขอมีถิ่นที่อยู่</a></li>
+                <li><a href="">งานทะเบียนคนต่างด้าว</a></li>
+            </ul>
+        </div>
+        <a href=""><img src="{{ url_for('static', filename='m1.png') }}" alt="mark2"></a>
+        <a href=""><img src="{{ url_for('static', filename='m2.png') }}" alt="mark2"></a>
+    </div>
+{% endblock %}

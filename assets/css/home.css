@@ -1,0 +1,150 @@
+
+.app-content .content .right {
+    display: flex;
+    column-gap: 1em;
+}
+
+.law {
+    margin-top: 10px;
+}
+
+.employee img {
+    position: relative;
+    left: 50%;
+    margin-top: 20px;
+    border-radius: 12px;
+    transform: translateX(-50%);
+}
+
+.qrcode {
+    padding: 24px 0;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    border-radius: 10px;
+}
+
+.qrcode .context {
+    margin-bottom: 1em;
+}
+.qrcode .context p {
+    text-align: center;
+    font: 400 1.5rem/2.1rem 'Roboto', 'Sarabun', sans-serif;
+    color: #222;
+}
+
+img[alt="qr-code"] {
+    border-radius: 12px;
+}
+
+.scan-me {
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    background-color: #666;
+    border: 12px solid #666;
+    border-radius: 24px;
+}
+.scan-me p {
+    padding-top: 12px;
+    text-align: center;
+    font: 500 2rem/2.6rem 'Roboto', sans-serif;
+    color: #fff;
+}
+
+video {
+    margin: 10px 0;
+    width: 445px;
+    border-radius: 4px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+.list .card {
+    display: flex;
+    column-gap: 12px;
+    padding: 10px 0;
+    width: 445px;
+    outline: none;
+    text-decoration: none;
+    border-bottom: 1px dashed #ccc;
+}
+.list .card img {
+    padding: 2px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+}
+.list .card p {
+    font: 400 .9rem/1.5rem 'Roboto', 'Sarabun', sans-serif;
+}
+.list .card .head {
+    font-weight: 700 !important;
+    color: #444;
+}
+.list .card:hover .description {
+    color: orange;
+}
+.list .card .description {
+    margin: 2px 0 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    color: #888;
+    transition: .1s;
+}
+.list .card .release {
+    font-weight: 500 !important;
+    color: #666;
+}
+
+.m-t {
+    margin-top: 20px;
+}
+
+.pr .card img {
+    width: 100px;
+    height: 100px;
+}
+.mt .card img,
+.cm .card img {
+    width: 100px;
+}
+.mt .card .description,
+.cm .card .description {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+}
+
+.l {
+    width: 445px;
+}
+.r img[alt="mark"] {
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.r img[alt="mark2"] {
+    position: relative;
+    left: 50%;
+    margin-top: 10px;
+    border-radius: 2px;
+    transform: translateX(-50%);
+}
+
+.show-more {
+    display: block;
+    margin: 1em 0;
+    padding: 1em 0 .5em;
+    text-align: right;
+    text-decoration: none;
+    font: 700 .9rem/1rem 'Roboto', 'Sarabun', sans-serif;
+    color: #888;
+    border-bottom: 2px solid #888;
+    transition: .1s;
+}
+.show-more:hover {
+    color: orangered;
+}
